@@ -16,6 +16,11 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class SeleniumLearn {
+    public static WebDriver getDriver(){
+        String path = System.getProperty("user.dir");
+        System.setProperty("webdriver.chrome.driver", path + "\\src\\driver\\chromedriver.exe");
+        return new ChromeDriver();
+    }
     public static void main(String[] args) {
         String path = System.getProperty("user.dir");
         System.setProperty("webdriver.chrome.driver", path + "\\src\\driver\\chromedriver.exe");
